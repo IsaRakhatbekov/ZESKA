@@ -30,7 +30,7 @@ const Header = () => {
               </a>
             </li>
           </ul>
-          <a className={styles.btn} href="#">
+          <a className={`${styles.btn} contactMe`} href="#">
             Связаться со мной
           </a>
         </nav>

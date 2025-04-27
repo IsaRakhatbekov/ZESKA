@@ -1,3 +1,7 @@
+:root {
+  --gradient-bg: linear-gradient(311deg, #8cb9ff 0%, #ff8fb9 100%);
+}
+
 .container {
   margin: 0 auto;
   padding: 0 20px;
@@ -19,4 +23,63 @@
 }
 .footer {
   grid-row-start: 3;
+}
+
+.contactMe {
+  position: relative;
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 100%;
+  border-radius: 100px;
+  padding: 10px 50px 10px 20px;
+  color: #151515;
+  border: 2px solid #151515;
+  font-family: var(--font-raleway) sans-serif;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 20px;
+    width: 18px;
+    height: 18px;
+    background: url("../../../public/arrow.svg") no-repeat center/cover;
+  }
+}
+
+.def-title {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 77%;
+  color: #151515;
+
+  & span {
+    font-family: var(--font-misto);
+    font-weight: 400;
+  }
+}
+
+.upTitle {
+  display: block;
+  font-family: var(--font-misto);
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  color: #151515;
+}
+
+.hashtag {
+  font-family: var(--font-raleway);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background: #151515;
+  padding: 10px 20px;
+  border-radius: 100px;
+  display: inline-block;
+  margin-left: auto;
 }
