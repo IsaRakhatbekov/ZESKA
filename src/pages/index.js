@@ -2,6 +2,8 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Hero from "../homePageUIComponents/Hero/Hero";
 import Cases from "../homePageUIComponents/Cases/Cases";
+import Skills from "../homePageUIComponents/Skills/Skills";
+import Experience from "../homePageUIComponents/Experience/Experience";
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
       <main className="main">
         <Hero />
         <Cases />
+        <Skills />
+        <Experience />
       </main>
       <Footer />
     </div>

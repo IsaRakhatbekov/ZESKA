@@ -1,0 +1,114 @@
+.footer {
+  padding: 80px 0 60px;
+
+  .title {
+    position: relative;
+    font-family: var(--font-raleway);
+    font-weight: 400;
+    font-size: 62px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #151515;
+    margin-bottom: 100px;
+    padding-left: 35px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      background: url("../../../public/footer-title-elem.png") no-repeat
+        center/cover;
+      left: 0;
+      top: -44px;
+    }
+  }
+
+  .middleBtnWrapper {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cvBtn {
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: var(--gradient-bg);
+    font-family: var(--font-raleway);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    color: #fff;
+  }
+
+  .nav {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .bitText {
+    margin: 30px 0;
+    font-family: var(--font-raleway);
+    font-weight: 700;
+    font-size: 66px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #151515;
+  }
+
+  .navInner {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .link {
+    font-family: var(--font-raleway);
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #151515;
+  }
+
+  .secondLink {
+    font-family: var(--font-raleway);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    text-transform: lowercase;
+    color: #151515;
+  }
+
+  .socialWrapper {
+    gap: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .socialLink {
+    font-family: var(--font-raleway);
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & span {
+      display: inline-block;
+      margin-top: 4px;
+    }
+  }
+
+  .bottom {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
