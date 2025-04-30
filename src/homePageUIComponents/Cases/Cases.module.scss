@@ -79,21 +79,39 @@
   }
 
   .cards {
-    .cardsList {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); // 3 колонки в сетке
-      grid-template-rows: auto auto; // две строки
-      gap: 20px; // отступы между карточками
-      margin-bottom: 40px;
-      background-color: #ccc;
-      padding: 20px;
+    .cardsTopImages {
+      display: flex;
+      gap: 20px;
+    }
+    .cardsTopImg {
+      width: 100px;
+      height: 100px;
+
+      &:nth-child(1) {
+        background-color: red;
+      }
+      &:nth-child(2) {
+        background-color: blue;
+      }
     }
 
-    .cardsItem {
-      background-color: white;
-      border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 8px;
+    .cardsBottomImages {
+      gap: 20px;
+      display: flex;
+    }
+
+    .cardsBottomImg {
+      width: 100px;
+      height: 100px;
+      &:nth-child(1) {
+        background-color: red;
+      }
+      &:nth-child(2) {
+        background-color: blue;
+      }
+      &:nth-child(3) {
+        background-color: green;
+      }
     }
   }
 

@@ -8,6 +8,20 @@
     justify-content: space-between;
   }
 
+  .logoWrapper {
+    position: relative;
+    width: 140px;
+    height: 40px;
+    overflow: hidden;
+    z-index: 99;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
   .list {
     gap: 20px;
     display: flex;
@@ -16,10 +30,201 @@
   }
 
   .link {
+    position: relative;
     font-family: var(--font-raleway);
     font-weight: 400;
     font-size: 20px;
     text-transform: uppercase;
     color: #151515;
+    text-decoration: none;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px; // расстояние от текста до линии
+      left: 50%;
+      width: 0;
+      height: 1px;
+      background-color: #151515;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  .menuBtn {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+
+    & span {
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 2px;
+      background-color: #151515;
+      border-radius: 2px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: #151515;
+        border-radius: 2px;
+        left: 0;
+        transition: all 0.3s;
+      }
+
+      &::before {
+        transform: translateY(-7px);
+      }
+
+      &::after {
+        transform: translateY(7px);
+      }
+    }
+  }
+
+  .menuBtnActive {
+    & span {
+      height: 0;
+      &::before {
+        transform: rotate(-45deg);
+      }
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .menuBody {
+    position: relative;
+    z-index: 5;
+    & .list {
+      display: none;
+    }
+  }
+
+  .btn {
+    transition: all 0.3s;
+
+    &:hover {
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 40px 0;
+
+    .logoWrapper {
+      width: 100px;
+      height: 25px;
+    }
+
+    .list {
+      gap: 10px;
+    }
+
+    .link {
+      font-size: 16px;
+    }
+
+    .btn {
+      padding: 10px;
+      font-size: 16px;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 0;
+
+    .list {
+      display: none;
+    }
+
+    .link {
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      &:active::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(311deg, #8cb9ff 0%, #ff8fb9 100%);
+        opacity: 0.4; // Прозрачность только на фоне
+        z-index: -1; // Помещаем под текст
+        display: block;
+      }
+    }
+
+    .btn {
+      position: relative;
+      z-index: 99;
+      margin-left: auto;
+    }
+
+    .menuBtn {
+      display: flex;
+    }
+
+    .menuBody {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-150%);
+      transition: all 0.5s;
+
+      & .list {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+      .item {
+        width: 100%;
+      }
+
+      .link {
+        display: inline-block;
+        width: 100%;
+        padding: 20px 0;
+      }
+    }
+
+    .menuBodyActive {
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    .btn {
+      font-size: 14px;
+    }
   }
 }

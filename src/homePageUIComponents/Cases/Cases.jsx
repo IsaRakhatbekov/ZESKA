@@ -18,13 +18,17 @@ const Cases = () => {
 
         {/* block eCards */}
         <div className={styles.cards}>
-          <ul className={styles.cardsList}>
-            <li className={styles.cardsItem}></li>
-            <li className={styles.cardsItem}></li>
-            <li className={styles.cardsItem}></li>
-            <li className={styles.cardsItem}></li>
-            <li className={styles.cardsItem}></li>
-          </ul>
+          <div className={styles.cardsImagesWrapper}>
+            <div className={styles.cardsTopImages}>
+              <div className={styles.cardsTopImg}></div>
+              <div className={styles.cardsTopImg}></div>
+            </div>
+            <div className={styles.cardsBottomImages}>
+              <div className={styles.cardsBottomImg}></div>
+              <div className={styles.cardsBottomImg}></div>
+              <div className={styles.cardsBottomImg}></div>
+            </div>
+          </div>
           <div className={styles.cardsContent}>
             <div className={styles.casesHeader}>
               <div className={styles.casesLogoWrapper}>
@@ -142,7 +146,7 @@ const Cases = () => {
           </h5>
         </div>
 
-        {/* идщсл Шnterview */}
+        {/* block Шnterview */}
         <div className={styles.interview}>
           <h2 className={styles.interviewTitle}>
             Хотите позвать меня на <span>собес</span>?
