@@ -16,9 +16,9 @@ export default function Home() {
       </Head> */}
       <Header />
       <main className="main">
-        <Hero />
-        {/* <Cases /> */}
-        {/* <Skills /> */}
+        {/* <Hero /> */}
+        <Cases />
+        <Skills />
         {/* <Experience /> */}
       </main>
       {/* <Footer /> */}

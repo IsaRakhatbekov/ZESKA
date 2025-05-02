@@ -20,7 +20,6 @@
     font-weight: 600;
     font-size: 30px;
     color: #151515;
-    margin-bottom: 40px;
   }
 
   .casesSubtitle {
@@ -79,19 +78,42 @@
   }
 
   .cards {
+    margin-top: 40px;
     .cardsTopImages {
       display: flex;
       gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .casesHeader {
+      margin: 40px 0;
     }
     .cardsTopImg {
-      width: 100px;
-      height: 100px;
-
+      width: 635px;
+      height: 365px;
+      overflow: hidden;
+      border-radius: 20px;
       &:nth-child(1) {
-        background-color: red;
+        padding: 20px;
+        background-color: #5744ff;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 23px;
+          left: 18px;
+          width: 582px;
+          height: 318px;
+          background: url("../../../public/cases/cases-1.png") no-repeat
+            center/cover;
+          border-radius: 12px;
+          overflow: hidden;
+        }
       }
       &:nth-child(2) {
-        background-color: blue;
+        background: url("../../../public/cases/cases-2.png") no-repeat
+          center/contain;
       }
     }
 
@@ -101,16 +123,128 @@
     }
 
     .cardsBottomImg {
-      width: 100px;
-      height: 100px;
+      position: relative;
+
       &:nth-child(1) {
-        background-color: red;
+        width: 300px;
+        height: 465px;
+
+        & div {
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          border-radius: 14px;
+          width: 225px;
+          height: 399px;
+          overflow: hidden;
+          z-index: 5;
+
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        & .freeCards {
+          position: absolute;
+          display: inline-block;
+          border-radius: 14px;
+          width: 225px;
+          height: 399px;
+          border-radius: 12px;
+        }
+
+        .freeCards1 {
+          bottom: 20px;
+          left: 26px;
+          background: #5744ff;
+          opacity: 0.6;
+          z-index: 4;
+        }
+
+        .freeCards2 {
+          background: #5744ff;
+          left: 50px;
+          bottom: 40px;
+          opacity: 0.4;
+          z-index: 3;
+        }
+        .freeCards3 {
+          top: 0;
+          right: 0;
+          opacity: 0.2;
+          z-index: 2;
+          background: #5744ff;
+        }
       }
       &:nth-child(2) {
-        background-color: blue;
+        border-radius: 20px;
+        width: 580px;
+        height: 471px;
+        overflow: hidden;
+        background: url("../../../public/cases/cases-card-bg.png") no-repeat
+          center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & span {
+          display: inline-block;
+          width: 414px;
+          height: 386px;
+          background: url("../../../public/cases/cases-4.png") no-repeat
+            center/cover;
+        }
       }
       &:nth-child(3) {
-        background-color: green;
+        position: relative;
+        border-radius: 20px;
+        width: 360px;
+        height: 474px;
+        overflow: hidden;
+        background-color: #5744ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & span {
+          display: inline-block;
+        }
+
+        & .cardMobileImg {
+          border-radius: 20px;
+          width: 257px;
+          height: 556px;
+          overflow: hidden;
+          margin-top: auto;
+          background: url("../../../public/cases/cases-5.png") no-repeat
+            center/contain;
+        }
+
+        & .mobilePurpleCard {
+          position: absolute;
+          bottom: -110px;
+          left: -65px;
+          border-radius: 8px;
+          width: 275px;
+          height: 200px;
+          overflow: hidden;
+          background: url("../../../public/cases/cases-purple-card.png")
+            no-repeat center/cover;
+        }
+
+        & .mobileBlackCard {
+          position: absolute;
+          top: -30px;
+          right: -75px;
+          border-radius: 8px;
+          width: 270px;
+          height: 200px;
+          overflow: hidden;
+          background: url("../../../public/cases/cases-black-card.png")
+            no-repeat center/cover;
+        }
       }
     }
   }
@@ -176,6 +310,78 @@
       font-size: 20px;
       line-height: 100%;
       color: #fff;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .cases {
+    .casesTitle {
+      font-size: 25px;
+    }
+
+    .casesSubtitle {
+      font-size: 20px;
+    }
+
+    .text {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cases {
+    .casesHead {
+      margin: 30px 0;
+    }
+
+    .casesTitle {
+      font-size: 20px;
+    }
+
+    .casesSubtitle {
+      font-size: 18px;
+    }
+
+    .text {
+      font-size: 16px;
+    }
+
+    .textWrapper {
+      gap: 20px;
+      flex-direction: column;
+    }
+
+    .casesHeader {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .interview {
+      .interviewTitle {
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .cases {
+    .interview {
+      .interviewBtnWrapper {
+        gap: 20px;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .cases {
+    .websiteLink {
+      font-size: 18px;
+      padding: 8px 10px;
     }
   }
 }

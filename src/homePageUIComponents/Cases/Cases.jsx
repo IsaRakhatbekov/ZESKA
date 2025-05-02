@@ -4,6 +4,7 @@ import styles from "./Cases.module.scss";
 import eCardsLogo from "@/public/cases/eCard-logo.png";
 import salaryLogo from "@/public/cases/salary-logo.png";
 import quantumLogo from "@/public/cases/quantum-logo.png";
+import cases3 from "@/public/cases/cases-3.png";
 
 const Cases = () => {
   return (
@@ -24,9 +25,28 @@ const Cases = () => {
               <div className={styles.cardsTopImg}></div>
             </div>
             <div className={styles.cardsBottomImages}>
-              <div className={styles.cardsBottomImg}></div>
-              <div className={styles.cardsBottomImg}></div>
-              <div className={styles.cardsBottomImg}></div>
+              <div className={styles.cardsBottomImg}>
+                <div>
+                  <Image src={cases3} alt="" />
+                </div>
+                <span
+                  className={`${styles.freeCards} ${styles.freeCards1}`}
+                ></span>
+                <span
+                  className={`${styles.freeCards} ${styles.freeCards2}`}
+                ></span>
+                <span
+                  className={`${styles.freeCards} ${styles.freeCards3}`}
+                ></span>
+              </div>
+              <div className={styles.cardsBottomImg}>
+                <span></span>
+              </div>
+              <div className={styles.cardsBottomImg}>
+                <span className={styles.mobilePurpleCard}></span>
+                <span className={styles.cardMobileImg}></span>
+                <span className={styles.mobileBlackCard}></span>
+              </div>
             </div>
           </div>
           <div className={styles.cardsContent}>
