@@ -120,9 +120,9 @@
   .leftBottom {
     gap: 50px;
     display: flex;
-    align-items: center;
   }
   .leftInner {
+    width: 100%;
     max-width: 399px;
   }
 
@@ -182,5 +182,86 @@
     font-weight: 600;
     font-size: 16px;
     color: #fff;
+  }
+
+  .leftHashtag {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .skills {
+    .leftBottom {
+      gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .skills {
+    .content {
+      flex-direction: column;
+    }
+
+    .left {
+      max-width: 686px;
+      margin: 0 auto;
+    }
+
+    .rightList {
+      max-width: 710px;
+      margin: 0 auto;
+    }
+
+    .leftHashtagWrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .leftHashtag {
+      margin-left: 0;
+    }
+
+    .skillsProgramsImg {
+      width: 45px;
+      height: 45px;
+
+      & img {
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    .rightItemText {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .skills {
+    .skillsTop {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .skillsProgramsWrapper {
+      align-self: flex-end;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .skills {
+    .leftBottom {
+      flex-direction: column;
+    }
+
+    .leftList {
+      padding-left: 15px;
+    }
   }
 }

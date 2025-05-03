@@ -16,12 +16,12 @@ export default function Home() {
       </Head> */}
       <Header />
       <main className="main">
-        {/* <Hero /> */}
+        <Hero />
         <Cases />
         <Skills />
-        {/* <Experience /> */}
+        <Experience />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

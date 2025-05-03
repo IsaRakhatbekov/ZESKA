@@ -89,7 +89,8 @@
       margin: 40px 0;
     }
     .cardsTopImg {
-      width: 635px;
+      width: 100%;
+      max-width: 635px;
       height: 365px;
       overflow: hidden;
       border-radius: 20px;
@@ -98,22 +99,28 @@
         background-color: #5744ff;
         position: relative;
 
+        & div {
+          width: 100%;
+          max-width: 582px;
+          height: 318px;
+          background: url("../../../public/cases/cases-1.png") no-repeat
+            center/contain;
+        }
+
         &::after {
           content: "";
           position: absolute;
           top: 23px;
           left: 18px;
-          width: 582px;
-          height: 318px;
-          background: url("../../../public/cases/cases-1.png") no-repeat
-            center/cover;
+
           border-radius: 12px;
           overflow: hidden;
         }
       }
       &:nth-child(2) {
         background: url("../../../public/cases/cases-2.png") no-repeat
-          center/contain;
+          center/cover;
+        border: 1px solid #5744ff;
       }
     }
 
@@ -128,11 +135,14 @@
       &:nth-child(1) {
         width: 300px;
         height: 465px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
 
         & div {
           bottom: 0;
           left: 0;
-          position: absolute;
+          // position: absolute;
           border-radius: 14px;
           width: 225px;
           height: 399px;
@@ -156,21 +166,28 @@
         }
 
         .freeCards1 {
+          animation: waveFloat 2s ease-in-out infinite;
+          animation-delay: 0s;
           bottom: 20px;
-          left: 26px;
+          right: 35px;
           background: #5744ff;
           opacity: 0.6;
           z-index: 4;
         }
 
         .freeCards2 {
+          animation: waveFloat 2s ease-in-out infinite;
+          animation-delay: 0.4s;
           background: #5744ff;
-          left: 50px;
+          right: 14px;
           bottom: 40px;
           opacity: 0.4;
           z-index: 3;
         }
         .freeCards3 {
+          animation: waveFloat 2s ease-in-out infinite;
+          animation-delay: 0.8s;
+
           top: 0;
           right: 0;
           opacity: 0.2;
@@ -180,7 +197,8 @@
       }
       &:nth-child(2) {
         border-radius: 20px;
-        width: 580px;
+        width: 100%;
+        max-width: 580px;
         height: 471px;
         overflow: hidden;
         background: url("../../../public/cases/cases-card-bg.png") no-repeat
@@ -224,26 +242,38 @@
 
         & .mobilePurpleCard {
           position: absolute;
-          bottom: -110px;
-          left: -65px;
+          bottom: -300px;
+          left: -200px;
           border-radius: 8px;
           width: 275px;
           height: 200px;
           overflow: hidden;
           background: url("../../../public/cases/cases-purple-card.png")
             no-repeat center/cover;
+          transition: all 1s ease-in-out;
+        }
+
+        & .mobilePurpleCardActive {
+          bottom: -110px;
+          left: -65px;
         }
 
         & .mobileBlackCard {
           position: absolute;
-          top: -30px;
-          right: -75px;
+          top: -300px;
+          right: -100px;
           border-radius: 8px;
           width: 270px;
           height: 200px;
           overflow: hidden;
           background: url("../../../public/cases/cases-black-card.png")
             no-repeat center/cover;
+          transition: all 1s ease-in-out;
+        }
+
+        & .mobileBlackCardActive {
+          top: -30px;
+          right: -75px;
         }
       }
     }
@@ -253,17 +283,253 @@
     margin: 100px 0;
 
     .salaryList {
-      padding: 20px;
-      background-color: #ccc;
+      border: 1px solid #000;
       margin-bottom: 40px;
+      border-radius: 30px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); // 2 колонки
+      grid-template-rows: repeat(2, auto); // 2 строки
+      overflow: hidden;
+    }
+
+    .salaryItem {
+      width: 600px;
+      height: 350px;
+      &:nth-child(1) {
+        background: #dee9ff;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          border-radius: 14px;
+          width: 349px;
+          height: 246px;
+          overflow: hidden;
+          top: 0;
+          left: 0;
+          background: url("../../../public/cases/salary_block_1.png") no-repeat
+            center/cover;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 100px;
+          height: 100px;
+          background-image: url("../../../public/cases/salary_block_2.png");
+        }
+      }
+
+      &:nth-child(2) {
+        background: url("../../../public/cases/salary-2.png") no-repeat
+          center/cover;
+      }
+      &:nth-child(3) {
+        background: #2772ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & div {
+          border-radius: 10px;
+          width: 488px;
+          height: 305px;
+          background: url("../../../public/cases/salary-3.png") no-repeat
+            center/cover;
+        }
+      }
+      &:nth-child(4) {
+        position: relative;
+        background: url("../../../public/cases/salary-4.png") no-repeat
+          center/cover;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: url("../../../public/cases/cases-card-bg.png") no-repeat
+            bottom/cover;
+          z-index: -1;
+        }
+      }
     }
   }
 
   .quantum {
     .quantumList {
       padding: 20px;
-      background-color: #ccc;
       margin-bottom: 40px;
+      border-radius: 20px;
+      gap: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .quantumItem {
+      border-radius: 20px;
+      width: 214px;
+      height: 463px;
+      overflow: hidden;
+
+      position: relative;
+
+      &:nth-child(1) {
+        width: 295px;
+        height: 606px;
+        background: url("../../../public/cases/phone-1.png") no-repeat
+          center/contain;
+      }
+      &:nth-child(2) {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: url("../../../public/cases/phone-2.png") no-repeat
+            center/cover;
+          box-shadow: 0 84px 80px -30px rgba(0, 0, 0, 0.08);
+        }
+      }
+      &:nth-child(3) {
+        width: 214px;
+        height: 463px;
+        box-shadow: 0 84px 80px -30px rgba(0, 0, 0, 0.08);
+        background: #005fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .phoneTop {
+          margin-top: 35px;
+          gap: 5px;
+          display: flex;
+          align-items: center;
+        }
+
+        .phoneBottom {
+          display: flex;
+          flex-direction: column;
+          max-width: 115px;
+          margin: 0 auto 35px;
+
+          & span {
+            margin-top: 5px;
+            gap: 5px;
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .phoneMiddle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .phoneCircles {
+          position: relative;
+        }
+
+        .phoneCircle_five {
+          &::after {
+            content: "";
+            position: absolute;
+            width: 277px;
+            height: 277px;
+            border-radius: 100%;
+            stroke-width: 0.55px;
+            border: 1px solid #fff;
+            opacity: 0.2;
+            top: -109px;
+            left: -110px;
+            animation: pulseFade 2s infinite ease-in-out;
+            animation-delay: 0.8s;
+          }
+        }
+
+        .phoneCircle_four {
+          &::after {
+            content: "";
+            position: absolute;
+            border-radius: 100%;
+            border: 1px solid #fff;
+            opacity: 0.2;
+            width: 200px;
+            height: 200px;
+            top: -71px;
+            left: -71px;
+            animation: pulseFade 2s infinite ease-in-out;
+            animation-delay: 0.6s;
+          }
+        }
+
+        .phoneCircle_three {
+          &::after {
+            content: "";
+            position: absolute;
+            border-radius: 100%;
+            border: 1px solid #fff;
+            opacity: 0.2;
+            width: 180px;
+            height: 180px;
+            left: -60px;
+            top: -60px;
+            animation: pulseFade 2s infinite ease-in-out;
+            animation-delay: 0.4s;
+          }
+        }
+
+        .phoneCircle_two {
+          &::after {
+            content: "";
+            position: absolute;
+            border-radius: 100%;
+            border: 1px solid #fff;
+            opacity: 0.2;
+            width: 140px;
+            height: 140px;
+            left: -39px;
+            top: -41px;
+            animation: pulseFade 2s infinite ease-in-out;
+            animation-delay: 0.2s;
+          }
+        }
+
+        .phoneCircle_one {
+          &::after {
+            content: "";
+            position: absolute;
+            border-radius: 100%;
+            border: 1px solid #fff;
+            opacity: 0.2;
+            width: 90px;
+            height: 90px;
+            left: -15px;
+            top: -16px;
+            animation: pulseFade 2s infinite ease-in-out;
+            animation-delay: 0s;
+          }
+        }
+      }
+      &:nth-child(4) {
+        background: url("../../../public/cases/phone-4.png") no-repeat
+          center/cover;
+        box-shadow: 0 84px 80px -30px rgba(0, 0, 0, 0.08);
+      }
+      &:nth-child(5) {
+        background: url("../../../public/cases/phone-5.png") no-repeat
+          center/cover;
+        box-shadow: 0 84px 80px -30px rgba(0, 0, 0, 0.08);
+      }
     }
   }
 
@@ -327,6 +593,46 @@
     .text {
       font-size: 18px;
     }
+
+    .cards {
+      .cardsTopImg {
+        width: 100%;
+        max-width: 635px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 20px;
+        &:nth-child(1) {
+          & div {
+            width: 100%;
+            max-width: 582px;
+            height: 100%;
+            background: url("../../../public/cases/cases-1.png") no-repeat
+              center/contain;
+          }
+        }
+        &:nth-child(2) {
+          border: 1px solid #5744ff;
+
+          & div {
+            background: url("../../../public/cases/cases-2.png") no-repeat
+              center/cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .cases {
+    .cards {
+      .cardsTopImages {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   }
 }
 
@@ -383,5 +689,31 @@
       font-size: 18px;
       padding: 8px 10px;
     }
+  }
+}
+
+@keyframes pulseFade {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+}
+@keyframes waveFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

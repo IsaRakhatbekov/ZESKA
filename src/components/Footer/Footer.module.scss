@@ -74,6 +74,12 @@
     color: #151515;
   }
 
+  .contactsWrapper {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+  }
+
   .secondLink {
     font-family: var(--font-raleway);
     font-weight: 500;
@@ -110,5 +116,106 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 1350px) {
+  .footer {
+    .bitText {
+      font-size: 55px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    .bitText {
+      font-size: 45px;
+    }
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .contactsWrapper {
+      align-self: flex-end;
+    }
+
+    .bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .middleBtnWrapper {
+      align-self: flex-end;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .footer {
+    .bitText {
+      font-size: 35px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    .bitText {
+      font-size: 25px;
+      text-align: left;
+    }
+
+    .navInner {
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 12px;
+    }
+
+    .contactsWrapper {
+      align-self: flex-start;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .middleBtnWrapper {
+      align-self: flex-start;
+    }
+
+    .title {
+      font-size: 40px;
+
+      &::after {
+        top: -37px;
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    .bottom {
+      .socialWrapper {
+        gap: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .footer {
+    .bitText {
+      font-size: 20px;
+    }
+    .socialWrapper {
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .bottom {
+      .middleBtnWrapper {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   }
 }
