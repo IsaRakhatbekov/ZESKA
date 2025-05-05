@@ -11,7 +11,7 @@ import tLogo from "@/public/t-logo.svg";
 
 const Skills = () => {
   return (
-    <div className={styles.skills}>
+    <div className={styles.skills} id="skills">
       <div className={`${styles.skillsContainer} container`}>
         <div className={styles.skillsTop}>
           <h2 className={`${styles.casesTitle} def-title`}>

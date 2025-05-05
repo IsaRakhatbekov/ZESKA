@@ -2,7 +2,7 @@ import styles from "./Experience.module.scss";
 
 const Experience = () => {
   return (
-    <div className={styles.experience}>
+    <div className={styles.experience} id="experience">
       <div className={`${styles.experienceContainer} container`}>
         <h2 className={`${styles.experienceTitle} def-title`}>
           <span className={`${styles.experienceUpTitle} upTitle`}>
@@ -54,6 +54,22 @@ const Experience = () => {
                   </p>
                 </li>
               </ul>
+              <div className={styles.linksWrapper}>
+                <a
+                  className={`${styles.link} contactMe`}
+                  href="https://ecards.cab/en"
+                  target="_blank"
+                >
+                  Cсылка на сайт eCards
+                </a>
+                <a
+                  className={`${styles.link} contactMe`}
+                  href="https://salary.cab/"
+                  target="_blank"
+                >
+                  Cсылка на сайт Salary
+                </a>
+              </div>
             </div>
           </li>
           <li className={styles.item}>
@@ -116,6 +132,13 @@ const Experience = () => {
                   </p>
                 </li>
               </ul>
+              <a
+                className={`${styles.link} contactMe`}
+                href="https://bitnorm.com/"
+                target="_blank"
+              >
+                Cсылка на сайт bitNorm
+              </a>
             </div>
           </li>
           <li className={styles.item}>

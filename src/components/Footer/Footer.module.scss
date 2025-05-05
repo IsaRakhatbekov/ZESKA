@@ -66,12 +66,29 @@
   }
 
   .link {
+    position: relative;
     font-family: var(--font-raleway);
     font-weight: 400;
     font-size: 22px;
     letter-spacing: -0.01em;
     text-transform: uppercase;
     color: #151515;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px; // расстояние от текста до линии
+      left: 50%;
+      width: 0;
+      height: 1px;
+      background-color: #151515;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 
   .contactsWrapper {
@@ -87,6 +104,23 @@
     letter-spacing: -0.01em;
     text-transform: lowercase;
     color: #151515;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px; // расстояние от текста до линии
+      left: 50%;
+      width: 0;
+      height: 1px;
+      background-color: #151515;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 
   .socialWrapper {
@@ -96,6 +130,7 @@
   }
 
   .socialLink {
+    position: relative;
     font-family: var(--font-raleway);
     font-weight: 500;
     font-size: 20px;
@@ -108,6 +143,22 @@
     & span {
       display: inline-block;
       margin-top: 4px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px; // расстояние от текста до линии
+      left: 50%;
+      width: 0;
+      height: 1px;
+      background-color: #151515;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    &:hover::after {
+      width: 100%;
     }
   }
 

@@ -28,7 +28,11 @@ const Hero = () => {
         <h1 className={styles.mainTitle}>ВИка соколова</h1>
         <div className={styles.bottom}>
           <div className={styles.socialWrapper}>
-            <a className={styles.socialIcons} href="#">
+            <a
+              className={styles.socialIcons}
+              href="https://t.me/zeskadesign"
+              target="_blank"
+            >
               <svg
                 width="30"
                 height="30"
@@ -74,7 +78,11 @@ const Hero = () => {
                 </defs>
               </svg>
             </a>
-            <a className={styles.socialIcons} href="#">
+            <a
+              className={styles.socialIcons}
+              href="https://www.behance.net/vikasokolovaDesign"
+              target="_blank"
+            >
               <svg
                 width="36"
                 height="36"
@@ -96,7 +104,11 @@ const Hero = () => {
                 />
               </svg>
             </a>
-            <a className={styles.socialIcons} href="#">
+            <a
+              className={styles.socialIcons}
+              href="https://www.linkedin.com/in/виктория-соколова-zeskadesign"
+              target="_blank"
+            >
               <svg
                 width="28"
                 height="28"
@@ -121,10 +133,21 @@ const Hero = () => {
               работы с e-commerce и b2c продуктами, особенно с админ-панелями
             </p>
             <div className={styles.middleBtnWrapper}>
-              <button className={styles.cvBtn}>Скачать резюме .pdf</button>
-              <button className={`${styles.btn} contactMe`}>
+              <a
+                className={styles.cvBtn}
+                href="ZESKA_вика_соколоа.pdf"
+                download
+              >
+                Скачать резюме .pdf
+              </a>
+              <a
+                className={`${styles.btn} contactMe`}
+                href="https://t.me/zeskaDesign"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Связаться со мной
-              </button>
+              </a>
             </div>
           </div>
           <span className={styles.gradientArrow}></span>

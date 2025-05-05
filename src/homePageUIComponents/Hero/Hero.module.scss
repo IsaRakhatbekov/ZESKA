@@ -1,4 +1,6 @@
 .hero {
+  position: relative;
+  z-index: 0;
   .top {
     gap: 20px;
     display: flex;
@@ -208,6 +210,12 @@
       font-size: 20px;
       line-height: 100%;
       color: #fff;
+      transition: all 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 3px 12px 0px rgba(140, 185, 255, 0.7),
+          0 3px 10px 0px rgba(255, 143, 185, 0.7);
+      }
     }
   }
 }

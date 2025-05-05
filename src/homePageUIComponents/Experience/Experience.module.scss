@@ -6,6 +6,7 @@
   }
 
   .item {
+    margin-top: 50px;
     gap: 60px;
     display: flex;
     position: relative;
@@ -65,7 +66,7 @@
   }
 
   .innerList {
-    margin-bottom: 18px;
+    margin-bottom: 30px;
   }
 
   .innerItem {
@@ -88,6 +89,12 @@
     font-weight: 400;
     font-size: 23px;
     color: #2b2b2b;
+  }
+
+  .linksWrapper {
+    gap: 30px;
+    display: flex;
+    align-items: center;
   }
 }
 

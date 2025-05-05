@@ -56,6 +56,11 @@
     border: 2px solid #151515;
     border-radius: 100px;
     padding: 10px 20px;
+    transition: box-shadow 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
   }
 
   .casesHeader {
@@ -79,6 +84,7 @@
 
   .cards {
     margin-top: 40px;
+
     .cardsTopImages {
       display: flex;
       gap: 20px;
@@ -133,12 +139,6 @@
       position: relative;
 
       &:nth-child(1) {
-        width: 300px;
-        height: 465px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-start;
-
         & div {
           bottom: 0;
           left: 0;
@@ -154,6 +154,14 @@
             height: 100%;
             object-fit: cover;
           }
+        }
+
+        .cardBtoomImgFirst {
+          width: 300px;
+          height: 465px;
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-start;
         }
 
         & .freeCards {
@@ -188,7 +196,7 @@
           animation: waveFloat 2s ease-in-out infinite;
           animation-delay: 0.8s;
 
-          top: 0;
+          top: 17px;
           right: 0;
           opacity: 0.2;
           z-index: 2;
@@ -216,15 +224,20 @@
         }
       }
       &:nth-child(3) {
+        padding: 5px;
         position: relative;
         border-radius: 20px;
         width: 360px;
         height: 474px;
         overflow: hidden;
         background-color: #5744ff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+
+        .cardsBottomImgThird {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
 
         & span {
           display: inline-block;
@@ -233,11 +246,12 @@
         & .cardMobileImg {
           border-radius: 20px;
           width: 257px;
-          height: 556px;
+          height: 400px;
           overflow: hidden;
           margin-top: auto;
           background: url("../../../public/cases/cases-5.png") no-repeat
             center/contain;
+          margin-bottom: -10px;
         }
 
         & .mobilePurpleCard {
@@ -260,8 +274,8 @@
 
         & .mobileBlackCard {
           position: absolute;
-          top: -300px;
-          right: -100px;
+          top: -50px;
+          right: -300px;
           border-radius: 8px;
           width: 270px;
           height: 200px;
@@ -293,69 +307,110 @@
     }
 
     .salaryItem {
-      width: 600px;
-      height: 350px;
-      &:nth-child(1) {
-        background: #dee9ff;
-        position: relative;
+      // height: 350px;
+      width: 100%;
+      max-width: 640px;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
 
-        &::before {
-          content: "";
+      &:nth-child(1) {
+        position: relative;
+        background: #dee9ff;
+
+        & span {
           position: absolute;
-          border-radius: 14px;
-          width: 349px;
-          height: 246px;
-          overflow: hidden;
-          top: 0;
-          left: 0;
-          background: url("../../../public/cases/salary_block_1.png") no-repeat
-            center/cover;
+          top: 41%;
+          left: 39%;
+          z-index: 2;
+          display: inline-block;
+
+          & svg {
+            width: 170px;
+            height: 170px;
+          }
         }
 
-        &::after {
-          content: "";
+        .salaryItemFirstImgWrapper,
+        .salaryItemSecondImgWrapper {
           position: absolute;
-          bottom: 0;
-          right: 0;
-          width: 100px;
-          height: 100px;
-          background-image: url("../../../public/cases/salary_block_2.png");
+          border-radius: 14px;
+          width: 100%;
+          max-width: 349px;
+          height: 246px;
+          overflow: hidden;
+
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+          }
+        }
+
+        .salaryItemFirstImgWrapper {
+          top: 40px;
+          left: 20px;
+          z-index: 3;
+        }
+
+        .salaryItemSecondImgWrapper {
+          right: 20px;
+          bottom: -20px;
+          z-index: 1;
         }
       }
 
       &:nth-child(2) {
-        background: url("../../../public/cases/salary-2.png") no-repeat
-          center/cover;
+        .salaryItemThirdImgWrapper {
+          width: 100%;
+          height: 100%;
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+          }
+        }
       }
+
       &:nth-child(3) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background: #2772ff;
+        padding: 20px 50px;
+
+        .salaryItemFourthImgWrapper {
+          border-radius: 10px;
+          width: 100%;
+          max-width: 488px;
+          // height: 305px;
+          aspect-ratio: 16 / 9;
+          overflow: hidden;
+
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        background: url("../../../public/cases/cases-card-bg.png") no-repeat top /
+          cover;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        & div {
-          border-radius: 10px;
-          width: 488px;
-          height: 305px;
-          background: url("../../../public/cases/salary-3.png") no-repeat
-            center/cover;
-        }
-      }
-      &:nth-child(4) {
-        position: relative;
-        background: url("../../../public/cases/salary-4.png") no-repeat
-          center/cover;
+        .salaryItemFifthImgWrapper {
+          width: 90%;
+          height: 90%;
+          aspect-ratio: 16 / 9;
 
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: url("../../../public/cases/cases-card-bg.png") no-repeat
-            bottom/cover;
-          z-index: -1;
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
         }
       }
     }
@@ -363,45 +418,53 @@
 
   .quantum {
     .quantumList {
-      padding: 20px;
-      margin-bottom: 40px;
+      margin: 40px 0;
       border-radius: 20px;
       gap: 35px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
+      flex-wrap: wrap;
     }
 
     .quantumItem {
-      border-radius: 20px;
-      width: 214px;
-      height: 463px;
-      overflow: hidden;
-
-      position: relative;
-
       &:nth-child(1) {
-        width: 295px;
-        height: 606px;
-        background: url("../../../public/cases/phone-1.png") no-repeat
-          center/contain;
+        .quantumImgWrapperFirst {
+          max-width: 302px;
+          height: 615px;
+          overflow: hidden;
+          aspect-ratio: 9 / 16;
+
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
       }
       &:nth-child(2) {
-        &::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
+        .quantumImgWrapperSecond {
+          border-radius: 20px;
           width: 100%;
-          height: 100%;
-          background: url("../../../public/cases/phone-2.png") no-repeat
-            center/cover;
+          max-width: 200px;
+          height: 463px;
           box-shadow: 0 84px 80px -30px rgba(0, 0, 0, 0.08);
+          overflow: hidden;
+          aspect-ratio: 9 / 16;
+
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
         }
       }
       &:nth-child(3) {
-        width: 214px;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 200px;
         height: 463px;
+        aspect-ratio: 9 / 16;
         box-shadow: 0 84px 80px -30px rgba(0, 0, 0, 0.08);
         background: #005fff;
         display: flex;
@@ -521,14 +584,38 @@
         }
       }
       &:nth-child(4) {
-        background: url("../../../public/cases/phone-4.png") no-repeat
-          center/cover;
-        box-shadow: 0 84px 80px -30px rgba(0, 0, 0, 0.08);
+        .quantumImgWrapperFourth {
+          border-radius: 20px;
+          width: 100%;
+          max-width: 200px;
+          height: 463px;
+          box-shadow: 0 84px 80px -30px rgba(0, 0, 0, 0.08);
+          overflow: hidden;
+          aspect-ratio: 9 / 16;
+
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
       }
       &:nth-child(5) {
-        background: url("../../../public/cases/phone-5.png") no-repeat
-          center/cover;
-        box-shadow: 0 84px 80px -30px rgba(0, 0, 0, 0.08);
+        .quantumImgWrapperFifth {
+          border-radius: 20px;
+          width: 100%;
+          max-width: 200px;
+          height: 463px;
+          box-shadow: 0 84px 80px -30px rgba(0, 0, 0, 0.08);
+          overflow: hidden;
+          aspect-ratio: 9 / 16;
+
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
       }
     }
   }
@@ -621,6 +708,243 @@
           }
         }
       }
+
+      .cardsImagesWrapper {
+        gap: 40px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cardsBottomImg {
+        &:nth-child(1) {
+          & div {
+            bottom: 0;
+            left: 0;
+            // position: absolute;
+            border-radius: 14px;
+            width: 225px;
+            height: 399px;
+            overflow: hidden;
+            z-index: 5;
+
+            & img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .cardBtoomImgFirst {
+            width: 300px;
+            height: 400px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+          }
+
+          & .freeCards {
+            position: absolute;
+            display: inline-block;
+            border-radius: 14px;
+            width: 225px;
+            height: 399px;
+            border-radius: 12px;
+          }
+
+          .freeCards1 {
+            animation: waveFloat 2s ease-in-out infinite;
+            animation-delay: 0s;
+            bottom: 10px;
+            right: 35px;
+            background: #5744ff;
+            opacity: 0.6;
+            z-index: 4;
+          }
+
+          .freeCards2 {
+            animation: waveFloat 2s ease-in-out infinite;
+            animation-delay: 0.4s;
+            background: #5744ff;
+            right: 14px;
+            bottom: 20px;
+            opacity: 0.4;
+            z-index: 3;
+          }
+
+          .freeCards3 {
+            animation: waveFloat 2s ease-in-out infinite;
+            animation-delay: 0.8s;
+
+            top: -30px;
+            right: 0;
+            opacity: 0.2;
+            z-index: 2;
+            background: #5744ff;
+          }
+        }
+        &:nth-child(2) {
+          border-radius: 20px;
+          width: 100%;
+          max-width: 580px;
+          height: 400px;
+          overflow: hidden;
+          background: url("../../../public/cases/cases-card-bg.png") no-repeat
+            center/cover;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          & span {
+            display: inline-block;
+            width: 100%;
+            max-width: 414px;
+            height: 386px;
+            background: url("../../../public/cases/cases-4.png") no-repeat
+              center/cover;
+          }
+        }
+        &:nth-child(3) {
+          padding: 5px;
+          position: relative;
+          border-radius: 20px;
+          width: 360px;
+          height: 400px;
+          overflow: hidden;
+          background-color: #5744ff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          & span {
+            display: inline-block;
+          }
+
+          & .cardMobileImg {
+            width: 195px;
+            height: 350px;
+
+            background: url("../../../public/cases/cases-5.png") no-repeat
+              center/contain;
+            margin-bottom: -18px;
+          }
+
+          & .mobilePurpleCard {
+            bottom: -300px;
+            left: -200px;
+            width: 245px;
+            height: 165px;
+          }
+
+          & .mobilePurpleCardActive {
+            bottom: -90px;
+            left: -75px;
+          }
+
+          & .mobileBlackCard {
+            width: 250px;
+            height: 180px;
+            top: 0;
+            right: -300px;
+          }
+
+          & .mobileBlackCardActive {
+            top: -7px;
+            right: -120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .cases {
+    .cards {
+      .cardsBottomImg {
+        &:nth-child(1) {
+          height: 350px;
+
+          & div {
+            height: 350px;
+            width: 203px;
+
+            & img {
+              object-fit: cover;
+            }
+          }
+
+          .cardBtoomImgFirst {
+            height: 350px;
+          }
+
+          .freeCards1 {
+            width: 203px;
+            height: 350px;
+            right: 65px;
+          }
+
+          .freeCards2 {
+            width: 203px;
+            height: 350px;
+            right: 33px;
+          }
+
+          .freeCards3 {
+            width: 203px;
+            height: 350px;
+            right: 5px;
+          }
+        }
+        &:nth-child(2) {
+          height: 350px;
+          max-width: 480px;
+
+          & span {
+            height: 90%;
+            background-size: contain;
+          }
+        }
+        &:nth-child(3) {
+          height: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .cases {
+    .cards {
+      .cardsBottomImg {
+        &:nth-child(3) {
+          .cardMobileImg {
+            height: 255px;
+            margin-bottom: -5px;
+          }
+        }
+      }
+    }
+
+    .salary {
+      .salaryItem {
+        &:nth-child(1) {
+          & span {
+            & svg {
+              width: 150px;
+              height: 150px;
+            }
+          }
+          .salaryItemFirstImgWrapper,
+          .salaryItemSecondImgWrapper {
+            max-width: 250px;
+            height: 169px;
+          }
+
+          .salaryItemFirstImgWrapper {
+            left: 60px;
+          }
+        }
+      }
     }
   }
 }
@@ -631,6 +955,140 @@
       .cardsTopImages {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 0;
+      }
+
+      .cardsBottomImages {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        width: 100%;
+        max-width: 635px;
+        margin: 0 auto;
+      }
+
+      .cardsBottomImg {
+        &:nth-child(1) {
+          order: 1;
+          height: 480px;
+          display: flex;
+          align-items: flex-end;
+
+          & div {
+            height: 400px;
+            width: 233px;
+          }
+
+          .cardBtoomImgFirst {
+            height: 400px;
+          }
+
+          .freeCards1 {
+            height: 400px;
+            width: 233px;
+            right: 40px;
+            bottom: 10px;
+          }
+          .freeCards2 {
+            height: 400px;
+            width: 233px;
+            right: 20px;
+            bottom: 25px;
+          }
+          .freeCards3 {
+            height: 400px;
+            width: 233px;
+            right: 0;
+            top: 30px;
+          }
+        }
+        &:nth-child(2) {
+          order: 0;
+          grid-column: 1/3;
+          height: 150px;
+          width: 100%;
+          max-width: 100%;
+
+          & span {
+            width: 365px;
+            height: 110px;
+            background-image: url("../../../public/cases/cases-4-small.png");
+            background-size: cover;
+          }
+        }
+        &:nth-child(3) {
+          order: 2;
+          height: 480px;
+          width: 300px;
+
+          .cardsBottomImgThird {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+          }
+
+          .cardMobileImg {
+            border-radius: 20px 20px 0 0;
+            height: 420px;
+            width: 255px;
+          }
+        }
+      }
+    }
+
+    .salary {
+      .salaryItem {
+        &:nth-child(1) {
+          & span {
+            top: 30%;
+            left: 33%;
+          }
+          .salaryItemFirstImgWrapper {
+            left: 10px;
+            max-width: 220px;
+            height: 150px;
+            top: 20px;
+          }
+        }
+      }
+    }
+
+    .quantum {
+      .quantumItem {
+        &:nth-child(1) {
+          .quantumImgWrapperFirst {
+            max-width: 200px;
+            height: 400px;
+          }
+        }
+        &:nth-child(2) {
+          .quantumImgWrapperSecond {
+            width: 100%;
+            max-width: 200px;
+            height: 400px;
+          }
+        }
+        &:nth-child(3) {
+          width: 100%;
+          max-width: 200px;
+          height: 400px;
+          aspect-ratio: 9 / 16;
+        }
+        &:nth-child(4) {
+          .quantumImgWrapperFourth {
+            width: 100%;
+            max-width: 200px;
+            height: 400px;
+          }
+        }
+        &:nth-child(5) {
+          .quantumImgWrapperFifth {
+            width: 100%;
+            max-width: 200px;
+            height: 400px;
+          }
+        }
       }
     }
   }
@@ -660,8 +1118,75 @@
     }
 
     .casesHeader {
-      flex-direction: column;
-      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .casesLogoWrapper {
+      order: 0;
+    }
+
+    .casesTitle {
+      order: 1;
+    }
+
+    .hashtag {
+      order: 0;
+    }
+
+    .cards {
+      .cardsTopImg {
+        &:nth-child(2) {
+          height: 288px;
+        }
+      }
+      .cardsBottomImg {
+        &:nth-child(1) {
+          width: 100%;
+          max-width: 100%;
+          height: 380px;
+          overflow: hidden;
+
+          .cardBtoomImgFirst {
+            height: 380px;
+            width: 100%;
+            // background-color: #ccc;
+          }
+
+          & div {
+            height: 330px;
+            width: 188px;
+          }
+
+          .freeCards {
+            height: 330px;
+            width: 188px;
+            right: auto;
+          }
+
+          .freeCards1 {
+            left: 23px;
+          }
+          .freeCards2 {
+            left: 56px;
+          }
+          .freeCards3 {
+            left: 90px;
+
+            top: 10px;
+          }
+        }
+
+        &:nth-child(3) {
+          height: 380px;
+          width: 100%;
+          max-width: 100%;
+
+          .cardMobileImg {
+            height: 325px;
+            width: 195px;
+          }
+        }
+      }
     }
 
     .interview {
@@ -680,6 +1205,42 @@
         flex-direction: column;
       }
     }
+
+    .quantum {
+      .quantumList {
+        gap: 10px;
+      }
+      .quantumItem {
+        &:nth-child(1) {
+          .quantumImgWrapperFirst {
+            max-width: 162px;
+            height: 351px;
+          }
+        }
+        &:nth-child(2) {
+          .quantumImgWrapperSecond {
+            max-width: 162px;
+            height: 351px;
+          }
+        }
+        &:nth-child(3) {
+          max-width: 162px;
+          height: 351px;
+        }
+        &:nth-child(4) {
+          .quantumImgWrapperFourth {
+            max-width: 162px;
+            height: 351px;
+          }
+        }
+        &:nth-child(5) {
+          .quantumImgWrapperFifth {
+            max-width: 162px;
+            height: 351px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -688,6 +1249,106 @@
     .websiteLink {
       font-size: 18px;
       padding: 8px 10px;
+    }
+
+    .cards {
+      .cardsImagesWrapper {
+        gap: 10px;
+      }
+      .cardsTopImages {
+        gap: 10px;
+      }
+      .cardsTopImg {
+        height: 250px;
+
+        &:nth-child(2) {
+          height: 226px;
+        }
+      }
+
+      .cardsBottomImages {
+        gap: 10px;
+      }
+      .cardsBottomImg {
+        &:nth-child(1) {
+          height: 320px;
+
+          .cardBtoomImgFirst {
+            height: 320px;
+          }
+
+          & div {
+            width: 140px;
+            height: 260px;
+          }
+
+          .freeCards {
+            width: 140px;
+            height: 260px;
+          }
+
+          .freeCards1 {
+            left: 13px;
+          }
+          .freeCards2 {
+            left: 28px;
+          }
+          .freeCards3 {
+            left: 41px;
+            top: 22px;
+          }
+        }
+        &:nth-child(3) {
+          height: 320px;
+
+          .cardMobileImg {
+            height: 250px;
+            width: 200px;
+          }
+
+          .mobileBlackCard {
+            width: 200px;
+            height: 130px;
+          }
+
+          .mobileBlackCardActive {
+            top: -6px;
+            right: -65px;
+          }
+
+          .mobilePurpleCard {
+            width: 200px;
+            height: 130px;
+          }
+
+          .mobilePurpleCardActive {
+            left: -63px;
+            bottom: -55px;
+          }
+        }
+      }
+    }
+
+    .salary {
+      .salaryList {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        border-radius: 0;
+      }
+
+      .salaryItem {
+        border-radius: 10px;
+        overflow: hidden;
+
+        &:nth-child(3) {
+          padding: 20px 40px;
+          .salaryItemFourthImgWrapper {
+            max-width: 100%;
+          }
+        }
+      }
     }
   }
 }

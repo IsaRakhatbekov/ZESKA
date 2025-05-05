@@ -2,6 +2,19 @@
   --gradient-bg: linear-gradient(311deg, #8cb9ff 0%, #ff8fb9 100%);
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+
+  @media (max-width: 768px) {
+    scroll-padding-top: 65px;
+  }
+}
+
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 20px;
@@ -35,7 +48,8 @@
   padding: 10px 50px 10px 20px;
   color: #151515;
   border: 2px solid #151515;
-  font-family: var(--font-raleway) sans-serif;
+  font-family: var(--font-raleway), sans-serif;
+  transition: box-shadow 0.3s ease;
 
   &::after {
     content: "";
@@ -45,6 +59,10 @@
     width: 18px;
     height: 18px;
     background: url("../../../public/arrow.svg") no-repeat center/cover;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(128, 128, 128, 0.7);
   }
 }
 

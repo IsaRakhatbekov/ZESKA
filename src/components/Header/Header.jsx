@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./Header.module.scss";
 import logo from "@/public/zeska-logo.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const [menuBtn, setMenuBtn] = useState(false);
@@ -9,37 +9,53 @@ const Header = () => {
   const handleCLickMenu = () => {
     setMenuBtn((prev) => !prev);
   };
+  useEffect(() => {
+    if (menuBtn) {
+      document.body.classList.add("lock");
+    } else {
+      document.body.classList.remove("lock");
+    }
+
+    return () => {
+      document.body.classList.remove("lock");
+    };
+  }, [menuBtn]);
 
   return (
     <header className={styles.header}>
       <div className={`${styles.headerContainer} container`}>
         <nav className={styles.nav}>
-          <div className={styles.logoWrapper}>
+          <a className={styles.logoWrapper} href="/">
             <Image src={logo} alt="ZESKA" />
-          </div>
+          </a>
           <ul className={styles.list}>
             <li className={styles.item}>
-              <a className={styles.link} href="#">
+              <a className={styles.link} href="#cases">
                 Кейсы
               </a>
             </li>
             <li className={styles.item}>
-              <a className={styles.link} href="#">
+              <a className={styles.link} href="#skills">
                 ХАРД&СОФТ скиллы
               </a>
             </li>
             <li className={styles.item}>
-              <a className={styles.link} href="#">
+              <a className={styles.link} href="#experience">
                 ОПЫТ
               </a>
             </li>
             <li className={styles.item}>
-              <a className={styles.link} href="#">
+              <a className={styles.link} href="#footer">
                 КОнтакты
               </a>
             </li>
           </ul>
-          <a className={`${styles.btn} contactMe`} href="#">
+          <a
+            className={`${styles.btn} contactMe`}
+            href="https://t.me/zeskaDesign"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Связаться со мной
           </a>
           <button
@@ -60,7 +76,7 @@ const Header = () => {
             <li className={styles.item}>
               <a
                 className={styles.link}
-                href="#"
+                href="#cases"
                 onClick={() => setMenuBtn(false)}
               >
                 Кейсы
@@ -69,7 +85,7 @@ const Header = () => {
             <li className={styles.item}>
               <a
                 className={styles.link}
-                href="#"
+                href="#skills"
                 onClick={() => setMenuBtn(false)}
               >
                 ХАРД&СОФТ скиллы
@@ -78,7 +94,7 @@ const Header = () => {
             <li className={styles.item}>
               <a
                 className={styles.link}
-                href="#"
+                href="#experience"
                 onClick={() => setMenuBtn(false)}
               >
                 ОПЫТ
@@ -87,7 +103,7 @@ const Header = () => {
             <li className={styles.item}>
               <a
                 className={styles.link}
-                href="#"
+                href="#footer"
                 onClick={() => setMenuBtn(false)}
               >
                 КОнтакты

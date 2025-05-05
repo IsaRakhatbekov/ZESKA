@@ -2,30 +2,41 @@ import styles from "./Footer.module.scss";
 
 const Footer = () => {
   return (
-    <footer className={`${styles.footer} footer`}>
+    <footer className={`${styles.footer} footer`} id="footer">
       <div className={`${styles.footerContainer} container`}>
         <h2 className={styles.title}>КОНТАКТЫ</h2>
         <div className={styles.wrapper}>
           <nav className={styles.nav}>
             <div className={styles.navInner}>
-              <a className={styles.link} href="#">
+              <a className={styles.link} href="#cases">
                 Кейсы
               </a>
-              <a className={styles.link} href="#">
+              <a className={styles.link} href="#experience">
                 Опыт
               </a>
-              <a className={styles.link} href="#">
+              <a className={styles.link} href="#skills">
                 Хард&Cофт скиллы
               </a>
             </div>
             <div className={styles.contactsWrapper}>
-              <a className={styles.secondLink} href="#">
+              <a
+                className={styles.secondLink}
+                href="https://mail.google.com/mail/?view=cm&to=vika.sokolova728@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 VIKA.SOKOLOVA728@GMAIL.COM
               </a>
-              <a className={styles.secondLink} href="#">
+
+              <a className={styles.secondLink} href="tel:+996220682517">
                 +996 220 68 25 17
               </a>
-              <a className={styles.secondLink} href="#">
+              <a
+                className={styles.secondLink}
+                href="https://t.me/zeskaDesign"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 @zeskaDesign
               </a>
             </div>
@@ -33,7 +44,11 @@ const Footer = () => {
           <h2 className={styles.bitText}>VIKA.SOKOLOVA728@GMAIL.COM</h2>
           <div className={styles.bottom}>
             <div className={styles.socialWrapper}>
-              <a className={styles.socialLink} href="#">
+              <a
+                className={styles.socialLink}
+                href="https://www.behance.net/vikasokolovaDesign"
+                target="_blank"
+              >
                 BEHANCE
                 <span>
                   <svg
@@ -62,7 +77,11 @@ const Footer = () => {
                   </svg>
                 </span>
               </a>
-              <a className={styles.socialLink} href="#">
+              <a
+                className={styles.socialLink}
+                href="https://t.me/zeskadesign"
+                target="_blank"
+              >
                 TELEGRAM
                 <span>
                   <svg
@@ -91,7 +110,11 @@ const Footer = () => {
                   </svg>
                 </span>
               </a>
-              <a className={styles.socialLink} href="#">
+              <a
+                className={styles.socialLink}
+                href="https://www.linkedin.com/in/viktoriia-sokolova-9a9069211?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                target="_blank"
+              >
                 LINKEDIN
                 <span>
                   <svg
@@ -122,10 +145,20 @@ const Footer = () => {
               </a>
             </div>
             <div className={styles.middleBtnWrapper}>
-              <button className={styles.cvBtn}>Скачать резюме .pdf</button>
-              <button className={`${styles.btn} contactMe`}>
+              <a
+                className={styles.cvBtn}
+                href="ZESKA_вика_соколоа.pdf"
+                download
+              >
+                Скачать резюме .pdf
+              </a>
+              <a
+                className={`${styles.btn} contactMe`}
+                href="https://t.me/zeskaDesign"
+                target="_blank"
+              >
                 Связаться со мной
-              </button>
+              </a>
             </div>
           </div>
         </div>

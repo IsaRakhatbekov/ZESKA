@@ -108,18 +108,7 @@
   }
 
   .menuBody {
-    position: relative;
-    z-index: 5;
-    & .list {
-      display: none;
-    }
-  }
-
-  .btn {
-    transition: all 0.3s;
-
-    &:hover {
-    }
+    display: none;
   }
 }
 
@@ -196,7 +185,9 @@
       align-items: center;
       justify-content: center;
       transform: translateY(-150%);
+      background-color: #fff;
       transition: all 0.5s;
+      z-index: 1;
 
       & .list {
         display: block;
