@@ -1,5 +1,6 @@
 .cases {
   padding: 140px 0 160px;
+  overflow: hidden;
 
   .casesContainer {
     position: relative;
@@ -12,14 +13,25 @@
       height: 290px;
       background: url("../../../public/cases-bg-elem.png") no-repeat
         center/contain;
+      z-index: -1;
     }
   }
 
   .casesTitle {
     font-family: var(--font-raleway);
-    font-weight: 600;
-    font-size: 30px;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 77%;
     color: #151515;
+  }
+
+  .casesUpTitle {
+    font-family: var(--font-misto);
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    color: #151515;
+    margin-bottom: 10px;
   }
 
   .casesSubtitle {
@@ -84,6 +96,28 @@
 
   .cards {
     margin-top: 40px;
+
+    .cardsContent {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 480px;
+        height: 480px;
+        right: -200px;
+        bottom: -200px;
+        background: url("../../../public/start.webp") no-repeat center/cover;
+        z-index: -1;
+      }
+    }
+
+    .cardsTitle {
+      font-family: var(--font-raleway);
+      font-weight: 600;
+      font-size: 30px;
+      color: #151515;
+    }
 
     .cardsTopImages {
       display: flex;
@@ -296,6 +330,14 @@
   .salary {
     margin: 100px 0;
 
+    .salaryTitle {
+      font-family: var(--font-raleway);
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 1.3em;
+      color: #151515;
+    }
+
     .salaryList {
       border: 1px solid #000;
       margin-bottom: 40px;
@@ -417,6 +459,12 @@
   }
 
   .quantum {
+    .quantumTitle {
+      font-family: var(--font-raleway);
+      font-weight: 600;
+      font-size: 30px;
+      color: #151515;
+    }
     .quantumList {
       margin: 40px 0;
       border-radius: 20px;
@@ -669,16 +717,12 @@
 
 @media (max-width: 1200px) {
   .cases {
-    .casesTitle {
-      font-size: 25px;
-    }
-
-    .casesSubtitle {
-      font-size: 20px;
-    }
-
     .text {
       font-size: 18px;
+    }
+
+    .casesTitle {
+      font-size: 56px;
     }
 
     .cards {
@@ -1010,8 +1054,9 @@
           max-width: 100%;
 
           & span {
-            width: 365px;
-            height: 110px;
+            width: 100%;
+            max-width: 425px;
+            height: 124px;
             background-image: url("../../../public/cases/cases-4-small.png");
             background-size: cover;
           }
@@ -1055,6 +1100,18 @@
     }
 
     .quantum {
+      .quantumHeader {
+        flex-wrap: wrap;
+      }
+      .quantumLogoWrapper {
+        order: 0;
+      }
+      .quantumTitle {
+        order: 1;
+      }
+      .quantumHashtag {
+        order: 0;
+      }
       .quantumItem {
         &:nth-child(1) {
           .quantumImgWrapperFirst {
@@ -1091,6 +1148,10 @@
         }
       }
     }
+
+    .interview {
+      margin-top: 100px;
+    }
   }
 }
 
@@ -1100,16 +1161,12 @@
       margin: 30px 0;
     }
 
-    .casesTitle {
-      font-size: 20px;
-    }
-
     .casesSubtitle {
-      font-size: 18px;
+      font-size: 25px;
     }
 
     .text {
-      font-size: 16px;
+      font-size: 20px;
     }
 
     .textWrapper {
@@ -1134,6 +1191,24 @@
     }
 
     .cards {
+      .cardsContent {
+        position: relative;
+
+        &::after {
+          bottom: -100px;
+        }
+      }
+      .cardsLogoWrapper {
+        order: 0;
+      }
+
+      .cardsTitle {
+        order: 2;
+      }
+
+      .cardsHashtag {
+        order: 1;
+      }
       .cardsTopImg {
         &:nth-child(2) {
           height: 288px;
@@ -1194,6 +1269,20 @@
         font-size: 40px;
       }
     }
+
+    .salary {
+      .salaryLogoWrapper {
+        order: 0;
+      }
+
+      .salaryTitle {
+        order: 1;
+      }
+
+      .salaryHashtag {
+        order: 0;
+      }
+    }
   }
 }
 
@@ -1241,14 +1330,31 @@
         }
       }
     }
+
+    .interview {
+      margin-top: 70px;
+      .cvBtn,
+      .btn {
+        width: 100%;
+        max-width: 350px;
+        padding: 10px 20px;
+      }
+    }
   }
 }
 
 @media (max-width: 500px) {
   .cases {
+    .casesContainer {
+      &::before {
+        top: 30px;
+      }
+    }
     .websiteLink {
-      font-size: 18px;
-      padding: 8px 10px;
+      display: inline-block;
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
     }
 
     .cards {
@@ -1259,7 +1365,12 @@
         gap: 10px;
       }
       .cardsTopImg {
+        border-radius: 11px;
         height: 250px;
+
+        &:nth-child(1) {
+          height: auto;
+        }
 
         &:nth-child(2) {
           height: 226px;
@@ -1296,6 +1407,13 @@
           .freeCards3 {
             left: 41px;
             top: 22px;
+          }
+        }
+        &:nth-child(2) {
+          & span {
+            width: 100%;
+            max-width: 425px;
+            height: 124px;
           }
         }
         &:nth-child(3) {
@@ -1348,6 +1466,23 @@
             max-width: 100%;
           }
         }
+      }
+    }
+
+    .quantum {
+      .quantumHeader {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .quantumLogoWrapper {
+        order: 1;
+      }
+      .quantumTitle {
+        order: 1;
+      }
+      .quantumHashtag {
+        order: 0;
+        margin-left: 0;
       }
     }
   }

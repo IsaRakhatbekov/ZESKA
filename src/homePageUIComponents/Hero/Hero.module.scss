@@ -256,11 +256,6 @@
         font-size: 20px;
       }
 
-      .vikaImgWrapper {
-        height: 145px;
-        max-width: 210px;
-      }
-
       .heroImgWrapper {
         margin-left: -15px;
       }
@@ -282,9 +277,21 @@
   .hero {
     .mainTitle {
       font-size: 55px;
+      margin-bottom: 0;
     }
 
     .top {
+      gap: 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .topLeft {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
       .profession {
         font-size: 20px;
       }
@@ -297,65 +304,8 @@
         font-size: 18px;
       }
 
-      .vikaImgWrapper {
-        height: 110px;
-        max-width: 155px;
-      }
-
       .heroImgWrapper {
         margin-left: 15px;
-      }
-
-      .figma {
-        top: 20px;
-        left: -25px;
-        width: 45px;
-        height: 45px;
-
-        &::before {
-          width: 26px;
-          height: 32px;
-        }
-      }
-
-      .ae {
-        top: 58px;
-        left: -17px;
-        width: 29px;
-        height: 29px;
-
-        &::before {
-          top: 2px;
-          width: 25px;
-          height: 25px;
-        }
-      }
-
-      .ps {
-        top: 20px;
-        right: -30px;
-        width: 50px;
-        height: 50px;
-
-        &::before {
-          right: 6px;
-          width: 40px;
-          height: 40px;
-        }
-      }
-
-      .yellow {
-        top: 68px;
-        right: -12px;
-        width: 25px;
-        height: 25px;
-
-        &::before {
-          right: -2px;
-          top: -1px;
-          width: 28px;
-          height: 27px;
-        }
       }
     }
 
@@ -394,11 +344,6 @@
 
       .heroImgWrapper {
         margin-left: 0;
-      }
-
-      .vikaImgWrapper {
-        height: 150px;
-        max-width: 220px;
       }
 
       .figma {
@@ -463,18 +408,50 @@
 
 @media (max-width: 550px) {
   .hero {
-    .mainTitle {
-      font-size: 30px;
-    }
     .top {
       .vikaImgWrapper {
-        height: 150px;
-        width: 250px;
+        height: 170px;
+        max-width: 300px;
+      }
+
+      .profession {
+        font-size: 34px;
+      }
+
+      .experience {
+        font-size: 29px;
       }
     }
     .bottom {
+      .middleSubtitle {
+        font-weight: 500;
+        font-size: 26px;
+        letter-spacing: -0.01em;
+        text-align: center;
+      }
       .middleBtnWrapper {
         flex-direction: column;
+      }
+
+      .text {
+        font-size: 20px;
+      }
+
+      .cvBtn,
+      .btn {
+        width: 100%;
+        max-width: 350px;
+        padding: 10px 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    .top {
+      .vikaImgWrapper {
+        height: 130px;
       }
     }
   }

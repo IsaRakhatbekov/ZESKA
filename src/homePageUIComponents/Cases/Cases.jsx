@@ -109,13 +109,19 @@ const Cases = () => {
           </div>
           <div className={styles.cardsContent}>
             <div className={styles.casesHeader}>
-              <div className={styles.casesLogoWrapper}>
-                <Image src={eCardsLogo} alt="eCard" />
+              <div
+                className={`${styles.casesLogoWrapper} ${styles.cardsLogoWrapper}`}
+              >
+                <Image src={eCardsLogo} alt="eCard" width={140} height={45} />
               </div>
-              <h4 className={`${styles.cardsTitle} ${styles.casesTitle}`}>
+              <h4 className={styles.cardsTitle}>
                 Финансовый сервис, созданный для арбитража трафика
               </h4>
-              <div className={`${styles.hashtag} hashtag`}>#ФИНТЕХ</div>
+              <div
+                className={`${styles.hashtag} hashtag ${styles.cardsHashtag}`}
+              >
+                #ФИНТЕХ
+              </div>
             </div>
             <h5 className={`${styles.cardsSubtitle} ${styles.casesSubtitle}`}>
               Что я делала: Ребрендинг, Создание дизайн-системы, Улучшение UX,
@@ -176,9 +182,9 @@ const Cases = () => {
                       width="199.265"
                       height="198.698"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -198,8 +204,8 @@ const Cases = () => {
                       y2="105.921"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-color="#2772FF" />
-                      <stop offset="1" stop-color="#AFD8EC" stop-opacity="0" />
+                      <stop stopColor="#2772FF" />
+                      <stop offset="1" stopColor="#AFD8EC" stopOpacity="0" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -225,13 +231,19 @@ const Cases = () => {
             </li>
           </ul>
           <div className={styles.casesHeader}>
-            <div className={styles.casesLogoWrapper}>
+            <div
+              className={`${styles.casesLogoWrapper} ${styles.salaryLogoWrapper}`}
+            >
               <Image src={salaryLogo} alt="eCard" />
             </div>
-            <h4 className={`${styles.salaryTitle} ${styles.casesTitle}`}>
+            <h4 className={styles.salaryTitle}>
               Платформа для отправления выплат в Россию из-за рубежа
             </h4>
-            <div className={`${styles.hashtag} hashtag`}>#ФИНТЕХ</div>
+            <div
+              className={`${styles.hashtag} hashtag ${styles.salaryHashtag}`}
+            >
+              #ФИНТЕХ
+            </div>
           </div>
           <h5 className={`${styles.salarySubtitle} ${styles.casesSubtitle}`}>
             Что я делала: Полная упаковка: Cоздание лого, Адаптирование
@@ -287,8 +299,8 @@ const Cases = () => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M8.28813 10.2767C8.5209 10.4397 8.57746 10.7605 8.41446 10.9933C8.25147 11.2261 7.93064 11.2826 7.69787 11.1196L7.96994 10.7311C7.69787 11.1196 7.69779 11.1196 7.6977 11.1195L7.69745 11.1193L7.69671 11.1188L7.6943 11.1171L7.68584 11.1112C7.6786 11.106 7.6682 11.0986 7.65485 11.0891C7.62815 11.0699 7.58963 11.0421 7.54097 11.0064C7.44369 10.9349 7.30566 10.8316 7.14042 10.7026C6.81071 10.4452 6.36896 10.0827 5.92521 9.66487C5.48381 9.24927 5.02741 8.76681 4.67773 8.26881C4.33794 7.7849 4.04833 7.21606 4.04833 6.64079C4.04833 6.06564 4.33797 5.49686 4.67773 5.01301C5.02741 4.51505 5.4838 4.03259 5.9252 3.61695C6.36894 3.19911 6.81068 2.83657 7.14038 2.57913C7.30562 2.45011 7.44365 2.34676 7.54092 2.27527C7.58958 2.23951 7.62811 2.21168 7.65481 2.19255C7.66816 2.18299 7.67856 2.17559 7.6858 2.17047L7.69426 2.16449L7.69666 2.1628L7.69765 2.16211C7.69774 2.16204 7.69782 2.16198 7.993 2.58341L7.69782 2.16198C7.93057 1.99896 8.25141 2.05549 8.41443 2.28824C8.57743 2.52095 8.52095 2.84173 8.28828 3.00477C8.28825 3.00479 8.28832 3.00475 8.28828 3.00477L8.28677 3.00583L8.28053 3.01025C8.27479 3.01431 8.26592 3.02061 8.25415 3.02905C8.23061 3.04592 8.19543 3.07132 8.1503 3.10449C8.05999 3.17086 7.93004 3.26814 7.7737 3.39021C7.46024 3.63496 7.04445 3.97649 6.63065 4.36613C6.21451 4.75799 5.81336 5.18644 5.51989 5.60438C5.21649 6.03643 5.07737 6.38853 5.07737 6.64079C5.07737 6.89323 5.21652 7.24542 5.51989 7.67746C5.81337 8.09541 6.2145 8.52384 6.63064 8.91566C7.04442 9.30526 7.46021 9.64673 7.77366 9.89143C7.93 10.0135 8.05995 10.1107 8.15026 10.1771C8.19539 10.2103 8.23056 10.2356 8.25411 10.2525C8.26588 10.2609 8.27474 10.2672 8.28048 10.2713L8.28673 10.2757L8.28813 10.2767Z"
                     fill="white"
                   />
@@ -409,14 +421,16 @@ const Cases = () => {
               </div>
             </li>
           </ul>
-          <div className={styles.casesHeader}>
-            <div className={styles.casesLogoWrapper}>
+          <div className={`${styles.casesHeader} ${styles.quantumHeader}`}>
+            <div
+              className={`${styles.casesLogoWrapper} ${styles.quantumLogoWrapper}`}
+            >
               <Image src={quantumLogo} alt="eCard" />
             </div>
-            <h4 className={`${styles.salaryTitle} ${styles.casesTitle}`}>
-              Сервис для онлайн-обучения
-            </h4>
-            <div className={`${styles.hashtag} hashtag`}>
+            <h4 className={styles.quantumTitle}>Сервис для онлайн-обучения</h4>
+            <div
+              className={`${styles.hashtag} hashtag ${styles.quantumHashtag}`}
+            >
               #Образовательная платформа
             </div>
           </div>

@@ -2,30 +2,68 @@ import Image from "next/image";
 import styles from "./Hero.module.scss";
 
 import vika from "@/public/hero-img.png";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsDesktop(window.innerWidth > 768);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   return (
     <div className={styles.hero}>
       <div className={`${styles.heroContainer} container`}>
-        <div className={styles.top}>
-          <div className={styles.topLeft}>
-            <span className={styles.profession}>UX/UI дизайнер</span>
-            <span className={styles.experience}>5 лет опыта</span>
-          </div>
-          <div className={styles.heroImgWrapper}>
-            <span className={`${styles.littleLogo} ${styles.figma}`}></span>
-            <span className={`${styles.littleLogo} ${styles.ae}`}></span>
-            <div className={styles.vikaImgWrapper}>
-              <Image className={styles.vikaImg} src={vika} alt="Vika" />
+        {isDesktop ? (
+          <>
+            <div className={styles.top}>
+              <div className={styles.topLeft}>
+                <span className={styles.profession}>UX/UI дизайнер</span>
+                <span className={styles.experience}>5 лет опыта</span>
+              </div>
+              <div className={styles.heroImgWrapper}>
+                <span className={`${styles.littleLogo} ${styles.figma}`}></span>
+                <span className={`${styles.littleLogo} ${styles.ae}`}></span>
+                <div className={styles.vikaImgWrapper}>
+                  <Image className={styles.vikaImg} src={vika} alt="Vika" />
+                </div>
+                <span className={`${styles.littleLogo} ${styles.ps}`}></span>
+                <span
+                  className={`${styles.littleLogo} ${styles.yellow}`}
+                ></span>
+              </div>
+              <div className={styles.topRight}>
+                <p className={styles.grayText}>Веб, граф, Моушн </p>
+              </div>
             </div>
-            <span className={`${styles.littleLogo} ${styles.ps}`}></span>
-            <span className={`${styles.littleLogo} ${styles.yellow}`}></span>
+            <h1 className={styles.mainTitle}>ВИка соколова</h1>
+          </>
+        ) : (
+          <div className={styles.top}>
+            <div className={styles.heroImgWrapper}>
+              <span className={`${styles.littleLogo} ${styles.figma}`}></span>
+              <span className={`${styles.littleLogo} ${styles.ae}`}></span>
+              <div className={styles.vikaImgWrapper}>
+                <Image className={styles.vikaImg} src={vika} alt="Vika" />
+              </div>
+              <span className={`${styles.littleLogo} ${styles.ps}`}></span>
+              <span className={`${styles.littleLogo} ${styles.yellow}`}></span>
+            </div>
+            <h1 className={styles.mainTitle}>ВИка соколова</h1>
+            <div className={styles.topLeft}>
+              <span className={styles.profession}>UX/UI дизайнер</span>
+              <span className={styles.experience}>5 лет опыта</span>
+            </div>
           </div>
-          <div className={styles.topRight}>
-            <p className={styles.grayText}>Веб, граф, Моушн </p>
-          </div>
-        </div>
-        <h1 className={styles.mainTitle}>ВИка соколова</h1>
+        )}
+
         <div className={styles.bottom}>
           <div className={styles.socialWrapper}>
             <a

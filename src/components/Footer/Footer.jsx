@@ -58,7 +58,7 @@ const Footer = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g clip-path="url(#clip0_1_19758)">
+                    <g clipPath="url(#clip0_1_19758)">
                       <path
                         d="M17.25 0.763184L-0.75 18.7632M2.06818 0.763184H17.25V15.945"
                         stroke="#151515"
@@ -91,7 +91,7 @@ const Footer = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g clip-path="url(#clip0_1_19758)">
+                    <g clipPath="url(#clip0_1_19758)">
                       <path
                         d="M17.25 0.763184L-0.75 18.7632M2.06818 0.763184H17.25V15.945"
                         stroke="#151515"
@@ -112,7 +112,7 @@ const Footer = () => {
               </a>
               <a
                 className={styles.socialLink}
-                href="https://www.linkedin.com/in/viktoriia-sokolova-9a9069211?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                href="https://www.linkedin.com/in/виктория-соколова-zeskadesign"
                 target="_blank"
               >
                 LINKEDIN
@@ -124,7 +124,7 @@ const Footer = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g clip-path="url(#clip0_1_19758)">
+                    <g clipPath="url(#clip0_1_19758)">
                       <path
                         d="M17.25 0.763184L-0.75 18.7632M2.06818 0.763184H17.25V15.945"
                         stroke="#151515"

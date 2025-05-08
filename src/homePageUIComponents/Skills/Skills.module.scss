@@ -1,5 +1,18 @@
 .skills {
   padding: 0 0 80px;
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -300px;
+    bottom: -300px;
+    width: 900px;
+    height: 900px;
+    background: url("../../../public/start.webp") no-repeat center/cover;
+    z-index: -1;
+  }
 
   .skillsContainer {
     position: relative;
