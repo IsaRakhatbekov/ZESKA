@@ -19,9 +19,9 @@ export default function Home() {
         <Hero />
         <Cases />
         <Skills />
-        {/* <Experience /> */}
+        <Experience />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

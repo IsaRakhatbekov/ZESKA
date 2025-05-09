@@ -14,7 +14,7 @@ const Skills = () => {
     <div className={styles.skills} id="skills">
       <div className={`${styles.skillsContainer} container`}>
         <div className={styles.skillsTop}>
-          <h2 className={`${styles.casesTitle} def-title`}>
+          <h2 className={`${styles.skillsTitle} def-title`}>
             <span className={`${styles.casesUpTitle} upTitle`}>
               ХАРД & СОФТ
             </span>
@@ -32,7 +32,9 @@ const Skills = () => {
                 <Image src={ae} alt="" />
               </li>
               <li className={`${styles.skillsProgramsImg} ${styles.yellow}`}>
-                <Image src={yellow} alt="" />
+                <div className={styles.yellowWrapper}>
+                  <Image src={yellow} alt="" />
+                </div>
               </li>
               <li className={`${styles.skillsProgramsImg} ${styles.pr}`}>
                 <Image src={pr} alt="" />

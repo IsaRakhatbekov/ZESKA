@@ -1,5 +1,5 @@
 .skills {
-  padding: 0 0 80px;
+  padding: 160px 0 80px;
   overflow: hidden;
   position: relative;
 
@@ -14,6 +14,13 @@
     z-index: -1;
   }
 
+  .skillsTitle {
+    font-family: var(--font-raleway);
+    font-weight: 500;
+    font-size: 90px;
+    color: #151515;
+  }
+
   .skillsContainer {
     position: relative;
     &::before {
@@ -25,6 +32,7 @@
       height: 290px;
       background: url("../../../public/skills-bg-element.png") no-repeat
         center/contain;
+      z-index: -1;
     }
   }
 
@@ -63,30 +71,50 @@
     background-color: #e6e6e6;
     z-index: 7;
     right: 240px;
+    transform: rotate(18deg);
   }
 
   .ps {
     background-color: #001e36;
     z-index: 6;
     right: 200px;
+    transform: rotate(-19deg);
   }
 
   .ae {
     background-color: #00005b;
     z-index: 5;
     right: 160px;
+    transform: rotate(-18deg);
   }
 
   .yellow {
     right: 120px;
     background-color: #ffd033;
     z-index: 4;
+    transform: rotate(50deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .yellowWrapper {
+    width: 60px;
+    height: 60px;
+    margin: 2px 0px 3px 5px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   .pr {
     right: 80px;
     background-color: #00005b;
     z-index: 3;
+    transform: rotate(2deg);
   }
 
   .some {
@@ -123,11 +151,12 @@
     gap: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .leftHashtagGradient {
     background: var(--gradient-bg);
+    margin-left: 0;
   }
 
   .leftBottom {
@@ -172,6 +201,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    width: 100%;
+    max-width: 424px;
   }
 
   .rightItem {
@@ -207,13 +238,29 @@
     .leftBottom {
       gap: 30px;
     }
+
+    .skillsTitle {
+      font-size: 70px;
+    }
   }
 }
 
 @media (max-width: 991px) {
   .skills {
+    .skillsTitle {
+      font-size: 50px;
+    }
     .content {
       flex-direction: column;
+    }
+
+    .skillsProgramsImg {
+      width: 50px;
+      height: 50px;
+    }
+
+    .yellowWrapper {
+      margin: 2px 0px 0px 2px;
     }
 
     .left {
@@ -224,53 +271,122 @@
     .rightList {
       max-width: 710px;
       margin: 0 auto;
+      gap: 20px;
     }
 
     .leftHashtagWrapper {
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-evenly;
     }
 
     .leftHashtag {
       margin-left: 0;
-    }
-
-    .skillsProgramsImg {
-      width: 45px;
-      height: 45px;
-
-      & img {
-        object-fit: contain;
-      }
     }
   }
 }
 
 @media (max-width: 768px) {
   .skills {
-    .rightItemText {
-      font-size: 14px;
-    }
+    padding: 100px 0 80px;
   }
 }
 
 @media (max-width: 680px) {
   .skills {
-    .skillsTop {
-      flex-direction: column;
-      align-items: flex-start;
+    &::after {
+      display: none;
     }
 
     .skillsProgramsWrapper {
+      position: absolute;
       align-self: flex-end;
+      right: 20px;
+      bottom: -100px;
+    }
+
+    .figma {
+      background-color: #e6e6e6;
+      z-index: 7;
+      right: 275px;
+      transform: rotate(18deg);
+    }
+
+    .ps {
+      background-color: #001e36;
+      z-index: 6;
+      right: 230px;
+      transform: rotate(-19deg);
+    }
+
+    .ae {
+      background-color: #00005b;
+      z-index: 5;
+      right: 185px;
+      transform: rotate(-18deg);
+    }
+
+    .yellow {
+      right: 140px;
+      background-color: #ffd033;
+      z-index: 4;
+      transform: rotate(50deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pr {
+      right: 90px;
+      background-color: #00005b;
+      z-index: 3;
+      transform: rotate(2deg);
+    }
+
+    .some {
+      right: 45px;
+      background: linear-gradient(180deg, #22384f 0%, #1d2f42 100%);
+      z-index: 2;
+    }
+
+    .tLogo {
+      background-color: #5282ff;
+      right: 0;
+      z-index: 1;
+    }
+
+    .content {
+      margin-bottom: 100px;
     }
   }
 }
 
 @media (max-width: 500px) {
   .skills {
+    .skillsContainer {
+      &::before {
+        left: 24px;
+        top: 0px;
+        width: 91%;
+        height: 100px;
+      }
+    }
+    .skillsTitle {
+      font-size: 40px;
+    }
+    .leftHashtagWrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     .leftBottom {
       flex-direction: column;
+    }
+
+    .leftTitle {
+      font-size: 22px;
+    }
+
+    .leftText {
+      font-size: 17px;
     }
 
     .leftList {

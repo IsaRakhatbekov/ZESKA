@@ -98,6 +98,30 @@
   }
 }
 
+@media (max-width: 991px) {
+  .experience {
+    .item {
+      gap: 20px;
+    }
+
+    .date {
+      width: 270px;
+    }
+
+    .linksWrapper {
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .link {
+      width: 100%;
+      max-width: 350px;
+      text-align: center;
+      padding: 10px 20px;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .experience {
     .item {
@@ -108,19 +132,16 @@
     }
 
     .title {
-      font-size: 23px;
+      font-size: 25px;
     }
 
     .subtitle {
       font-size: 21px;
+      margin-bottom: 15px;
     }
 
     .text {
-      font-size: 18px;
-    }
-
-    .innerText {
-      font-size: 18px;
+      font-size: 20px;
     }
   }
 }
@@ -136,6 +157,19 @@
 
     .date {
       width: 100%;
+    }
+
+    .link {
+      font-size: 25px;
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .experience {
+    .link {
+      font-size: 20px;
     }
   }
 }

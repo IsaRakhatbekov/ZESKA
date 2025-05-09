@@ -452,7 +452,7 @@ const Cases = () => {
             телеграм:) Буду рада нашему сотрудничеству!
           </p>
           <div className={styles.interviewBtnWrapper}>
-            <a className={styles.cvBtn} href="ZESKA_вика_соколоа.pdf" download>
+            <a className={styles.cvBtn} href="Скачать резюме .pdf" download>
               Скачать резюме .pdf
             </a>
             <a

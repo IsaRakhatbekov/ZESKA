@@ -132,13 +132,15 @@ const Experience = () => {
                   </p>
                 </li>
               </ul>
-              <a
-                className={`${styles.link} contactMe`}
-                href="https://bitnorm.com/"
-                target="_blank"
-              >
-                Cсылка на сайт bitNorm
-              </a>
+              <div className={styles.linksWrapper}>
+                <a
+                  className={`${styles.link} contactMe`}
+                  href="https://bitnorm.com/"
+                  target="_blank"
+                >
+                  Cсылка на сайт bitNorm
+                </a>
+              </div>
             </div>
           </li>
           <li className={styles.item}>
