@@ -26,7 +26,7 @@ const Header = () => {
       <div className={`${styles.headerContainer} container`}>
         <nav className={styles.nav}>
           <a className={styles.logoWrapper} href="/">
-            <Image src={logo} alt="ZESKA" />
+            <Image src={logo} alt="ZESKA" loading="lazy" />
           </a>
           <ul className={styles.list}>
             <li className={styles.item}>

@@ -74,7 +74,7 @@ const Cases = () => {
               <div className={styles.cardsBottomImg}>
                 <div className={styles.cardBtoomImgFirst}>
                   <div>
-                    <Image src={cases3} alt="" />
+                    <Image src={cases3} alt="" loading="lazy" />
                   </div>
                   <span
                     className={`${styles.freeCards} ${styles.freeCards1}`}
@@ -112,7 +112,13 @@ const Cases = () => {
               <div
                 className={`${styles.casesLogoWrapper} ${styles.cardsLogoWrapper}`}
               >
-                <Image src={eCardsLogo} alt="eCard" width={140} height={45} />
+                <Image
+                  src={eCardsLogo}
+                  alt="eCard"
+                  width={140}
+                  height={45}
+                  loading="lazy"
+                />
               </div>
               <h4 className={styles.cardsTitle}>
                 Финансовый сервис, созданный для арбитража трафика
@@ -157,7 +163,7 @@ const Cases = () => {
           <ul className={styles.salaryList}>
             <li className={styles.salaryItem}>
               <div className={styles.salaryItemFirstImgWrapper}>
-                <Image src={salary1} alt="" />
+                <Image src={salary1} alt="" loading="lazy" />
               </div>
               <span>
                 <svg
@@ -212,22 +218,22 @@ const Cases = () => {
                 </svg>
               </span>
               <div className={styles.salaryItemSecondImgWrapper}>
-                <Image src={salary2} alt="" />
+                <Image src={salary2} alt="" loading="lazy" />
               </div>
             </li>
             <li className={styles.salaryItem}>
               <div className={styles.salaryItemThirdImgWrapper}>
-                <Image src={salary3} alt="" />
+                <Image src={salary3} alt="" loading="lazy" />
               </div>
             </li>
             <li className={styles.salaryItem}>
               <div className={styles.salaryItemFourthImgWrapper}>
-                <Image src={salary4} alt="" />
+                <Image src={salary4} alt="" loading="lazy" />
               </div>
             </li>
             <li className={styles.salaryItem}>
               <div className={styles.salaryItemFifthImgWrapper}>
-                <Image src={salary5} alt="" />
+                <Image src={salary5} alt="" loading="lazy" />
               </div>
             </li>
           </ul>
@@ -235,7 +241,7 @@ const Cases = () => {
             <div
               className={`${styles.casesLogoWrapper} ${styles.salaryLogoWrapper}`}
             >
-              <Image src={salaryLogo} alt="eCard" />
+              <Image src={salaryLogo} alt="eCard" loading="lazy" />
             </div>
             <h4 className={styles.salaryTitle}>
               Платформа для отправления выплат в Россию из-за рубежа
@@ -280,14 +286,14 @@ const Cases = () => {
               <div
                 className={`${styles.quantumImgWrapper} ${styles.quantumImgWrapperFirst}`}
               >
-                <Image src={quantum1} alt="" />
+                <Image src={quantum1} alt="" loading="lazy" />
               </div>
             </li>
             <li className={styles.quantumItem}>
               <div
                 className={`${styles.quantumImgWrapper} ${styles.quantumImgWrapperSecond}`}
               >
-                <Image src={quantum2} alt="" />
+                <Image src={quantum2} alt="" loading="lazy" />
               </div>
             </li>
             <li className={styles.quantumItem}>
@@ -411,14 +417,14 @@ const Cases = () => {
               <div
                 className={`${styles.quantumImgWrapper} ${styles.quantumImgWrapperFourth}`}
               >
-                <Image src={quantum4} alt="" />
+                <Image src={quantum4} alt="" loading="lazy" />
               </div>
             </li>
             <li className={styles.quantumItem}>
               <div
                 className={`${styles.quantumImgWrapper} ${styles.quantumImgWrapperFifth}`}
               >
-                <Image src={quantum5} alt="" />
+                <Image src={quantum5} alt="" loading="lazy" />
               </div>
             </li>
           </ul>
@@ -426,7 +432,7 @@ const Cases = () => {
             <div
               className={`${styles.casesLogoWrapper} ${styles.quantumLogoWrapper}`}
             >
-              <Image src={quantumLogo} alt="eCard" />
+              <Image src={quantumLogo} alt="eCard" loading="lazy" />
             </div>
             <h4 className={styles.quantumTitle}>Сервис для онлайн-обучения</h4>
             <div

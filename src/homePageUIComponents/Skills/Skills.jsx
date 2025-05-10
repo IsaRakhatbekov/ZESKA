@@ -23,24 +23,24 @@ const Skills = () => {
           <div className={styles.skillsProgramsWrapper}>
             <ul className={styles.skillsPrograms}>
               <li className={`${styles.skillsProgramsImg} ${styles.figma}`}>
-                <Image src={figma} alt="" />
+                <Image src={figma} alt="" loading="lazy" />
               </li>
               <li className={`${styles.skillsProgramsImg} ${styles.ps}`}>
-                <Image src={ps} alt="" />
+                <Image src={ps} alt="" loading="lazy" />
               </li>
               <li className={`${styles.skillsProgramsImg} ${styles.ae}`}>
-                <Image src={ae} alt="" />
+                <Image src={ae} alt="" loading="lazy" />
               </li>
               <li className={`${styles.skillsProgramsImg} ${styles.yellow}`}>
                 <div className={styles.yellowWrapper}>
-                  <Image src={yellow} alt="" />
+                  <Image src={yellow} alt="" loading="lazy" />
                 </div>
               </li>
               <li className={`${styles.skillsProgramsImg} ${styles.pr}`}>
-                <Image src={pr} alt="" />
+                <Image src={pr} alt="" loading="lazy" />
               </li>
               <li className={`${styles.skillsProgramsImg} ${styles.some}`}>
-                <Image src={some} alt="" />
+                <Image src={some} alt="" loading="lazy" />
               </li>
               <li className={`${styles.skillsProgramsImg} ${styles.tLogo}`}>
                 <Image src={tLogo} alt="" />

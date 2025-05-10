@@ -32,7 +32,12 @@ const Hero = () => {
                 <span className={`${styles.littleLogo} ${styles.figma}`}></span>
                 <span className={`${styles.littleLogo} ${styles.ae}`}></span>
                 <div className={styles.vikaImgWrapper}>
-                  <Image className={styles.vikaImg} src={vika} alt="Vika" />
+                  <Image
+                    className={styles.vikaImg}
+                    src={vika}
+                    alt="Vika"
+                    loading="lazy"
+                  />
                 </div>
                 <span className={`${styles.littleLogo} ${styles.ps}`}></span>
                 <span
@@ -51,7 +56,12 @@ const Hero = () => {
               <span className={`${styles.littleLogo} ${styles.figma}`}></span>
               <span className={`${styles.littleLogo} ${styles.ae}`}></span>
               <div className={styles.vikaImgWrapper}>
-                <Image className={styles.vikaImg} src={vika} alt="Vika" />
+                <Image
+                  className={styles.vikaImg}
+                  src={vika}
+                  alt="Vika"
+                  loading="lazy"
+                />
               </div>
               <span className={`${styles.littleLogo} ${styles.ps}`}></span>
               <span className={`${styles.littleLogo} ${styles.yellow}`}></span>
