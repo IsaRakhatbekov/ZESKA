@@ -60,10 +60,6 @@ body.lock {
     height: 18px;
     background: url("../../../public/arrow.svg") no-repeat center/cover;
   }
-
-  &:hover {
-    box-shadow: 0 6px 10px rgba(128, 128, 128, 0.7);
-  }
 }
 
 .def-title {

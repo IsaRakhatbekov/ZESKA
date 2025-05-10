@@ -3,21 +3,21 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import styles from "./Cases.module.scss";
 
-import eCardsLogo from "@/public/cases/eCard-logo.png";
-import salaryLogo from "@/public/cases/salary-logo.png";
-import quantumLogo from "@/public/cases/quantum-logo.png";
-import cases3 from "@/public/cases/cases-3.png";
+import eCardsLogo from "@/public/cases/eCard-logo.webp";
+import salaryLogo from "@/public/cases/salary-logo.webp";
+import quantumLogo from "@/public/cases/quantum-logo.webp";
+import cases3 from "@/public/cases/cases-3.webp";
 
-import salary1 from "@/public/cases/salary_block_1.png";
-import salary2 from "@/public/cases/salary_block_2.png";
-import salary3 from "@/public/cases/salary-2.png";
-import salary4 from "@/public/cases/salary-3.png";
-import salary5 from "@/public/cases/salary-4.png";
+import salary1 from "@/public/cases/salary_block_1.webp";
+import salary2 from "@/public/cases/salary_block_2.webp";
+import salary3 from "@/public/cases/salary-3.webp";
+import salary4 from "@/public/cases/salary-4.webp";
+import salary5 from "@/public/cases/salary-5.webp";
 
-import quantum1 from "@/public/cases/phone-1.png";
-import quantum2 from "@/public/cases/phone-2.png";
-import quantum4 from "@/public/cases/phone-4.png";
-import quantum5 from "@/public/cases/phone-5.png";
+import quantum1 from "@/public/cases/phone-1.webp";
+import quantum2 from "@/public/cases/phone-2.webp";
+import quantum4 from "@/public/cases/phone-4.webp";
+import quantum5 from "@/public/cases/phone-5.webp";
 
 const Cases = () => {
   const cardsRef = useRef(null);
@@ -151,6 +151,7 @@ const Cases = () => {
             </a>
           </div>
         </div>
+
         {/* block Salary */}
         <div className={styles.salary}>
           <ul className={styles.salaryList}>
@@ -452,7 +453,11 @@ const Cases = () => {
             телеграм:) Буду рада нашему сотрудничеству!
           </p>
           <div className={styles.interviewBtnWrapper}>
-            <a className={styles.cvBtn} href="Скачать резюме .pdf" download>
+            <a
+              className={styles.cvBtn}
+              href="/CV_Вика_Соколова_UX_UI_дизайнер.pdf"
+              download
+            >
               Скачать резюме .pdf
             </a>
             <a

@@ -1,7 +1,7 @@
 .skills {
   padding: 160px 0 80px;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 
   &::after {
     content: "";
@@ -230,6 +230,7 @@
 
   .leftHashtag {
     padding: 10px 15px;
+    font-size: 14px;
   }
 }
 

@@ -173,7 +173,7 @@ const Hero = () => {
             <div className={styles.middleBtnWrapper}>
               <a
                 className={styles.cvBtn}
-                href="ZESKA_вика_соколоа.pdf"
+                href="/CV_Вика_Соколова_UX_UI_дизайнер.pdf"
                 download
               >
                 Скачать резюме .pdf

@@ -264,7 +264,11 @@ const Footer = () => {
               )}
             </div>
             <div className={styles.middleBtnWrapper}>
-              <a className={styles.cvBtn} href="Скачать резюме .pdf" download>
+              <a
+                className={styles.cvBtn}
+                href="/CV_Вика_Соколова_UX_UI_дизайнер.pdf"
+                download
+              >
                 Скачать резюме .pdf
               </a>
               <a
